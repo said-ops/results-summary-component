@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'main';
+    src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format('truetype');
+    font-weight: 500 700 800;
+}
+:root{
+    /*=====primary=====*/
+    --light-red:hsl(0, 100%, 67%);
+    --light-red-bg:hsla(var(--light-red) , 20%);
+    --orangey-yellow:hsl(39, 100%, 56%);
+    --orangey-yellow-bg:hsla(var(--orangey-yellow),20%);
+    --green-teal:hsl(166, 100%, 37%);
+    --green-teal-bg::hsla(var(--green-teal),20%);
+    --cobalt-blue:hsl(234, 85%, 45%);
+    --cobalt-blue-bg:hsla(var(--cobalt-blue),20%);
+    /*=====neutral=====*/
+    --white:hsl(0, 0%, 100%);
+    --pale-blue:hsl(221, 100%, 96%);
+    --light-lavender:hsl(241, 100%, 89%);
+    --drak-grey-blue:hsl(224, 30%, 27%);
+    --para-fz:18px;
+}
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+/*===========================================================*/
