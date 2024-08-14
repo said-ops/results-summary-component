@@ -6,13 +6,13 @@
 :root{
     /*=====primary=====*/
     --light-red:hsl(0, 100%, 67%);
-    --light-red-bg:hsla(0, 100%, 67% , 0.2);
+    --light-red-bg:hsl(0deg 100% 67% / 8%);
     --orangey-yellow:hsl(39, 100%, 56%);
-    --orangey-yellow-bg:hsla(39, 100%, 56%,0.2);
+    --orangey-yellow-bg:hsl(39deg 100% 56% / 8%);
     --green-teal:hsl(166, 100%, 37%);
-    --green-teal-bg::hsla(166, 100%, 37%,0.2);
+    --green-teal-bg:hsl(166deg 100% 37% / 8%);
     --cobalt-blue:hsl(234, 85%, 45%);
-    --cobalt-blue-bg:hsla(234, 85%, 45%,0.2);
+    --cobalt-blue-bg:hsl(234deg 85% 45% / 8%);
     /*=====neutral=====*/
     --white:hsl(0, 0%, 100%);
     --pale-blue:hsl(221, 100%, 96%);
@@ -78,7 +78,7 @@ main{
     gap: 1rem;
 }
 .result{
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-weight: 700;
     color: var(--white);
 }
@@ -124,8 +124,23 @@ main{
 }
 .title{
     font-weight: 700;
-    color: var(--light-red);
     font-size: 18px;
+}
+.item:nth-child(1){
+    color: var(--light-red);
+    background-color: var(--light-red-bg);
+}
+.item:nth-child(2){
+    color: var(--orangey-yellow);
+    background-color: var(--orangey-yellow-bg);
+}
+.item:nth-child(3){
+    color: var(--green-teal);
+    background-color: var(--green-teal-bg);
+}
+.item:nth-child(4){
+    color: var(--cobalt-blue);
+    background-color: var(--cobalt-blue-bg);
 }
 .item-right{
     font-weight: 700;
@@ -137,14 +152,38 @@ main{
 }
 button{
     border: 0;
-    height: 3.2rem;
+    height: 3.5rem;
     color: var(--white);
-    background: var(--gradient-gb);
+    background: var(--drak-grey-blue);
     border-radius: 2rem;
     font-family: 'main';
     font-size: 1.2rem;
     font-weight: 500;
 }
+button:hover{
+    font-size: 1.2rem;
+    font-weight: 500;
+    background:var(--gradient-gb) ;
+    cursor: pointer;
+}
 .left{
     border-radius: 2rem;
+}
+/*=========media queries===========*/
+@media screen and (max-width:750px) {
+    main{
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        gap: 2rem;
+    }
+    .left,
+    .right{
+        width: 100%;
+        padding: 1rem;
+    }
+    .left{
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
 }
